@@ -3,6 +3,32 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Primary earthy tones */
+  --color-brown-dark: #423027;
+  --color-brown-main: #574238;
+  --color-brown-soft: #594840;
+
+  /* Greens / muted natural tones */
+  --color-green-main: #8a9675;
+  --color-green-variant: #8e9a7a;
+  --color-green-soft: #8a9676;
+
+  /* Neutral greys */
+  --color-gray-main: #4b5563;
+
+  /* Light backgrounds / creams */
+  --color-cream-light: #fffcf4;
+  --color-cream-soft: #f9f6f0;
+  --color-cream-muted: #f3ebe4;
+  --color-cream-alt: #eee2db;
+
+  /* Beige / warm neutrals */
+  --color-beige-main: #d7c5bc;
+  --color-beige-soft: #d4d7c5;
+  --color-beige-muted: #cccfba;
+  --color-beige-light: #ddded4;
+  --color-beige-variant: #e2e6da;
 }
 
 @theme inline {
@@ -10,6 +36,29 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-fraunces: var(--font-fraunces);
+  --font-plus-jakarta-sans: var(--font-plus-jakarta-sans);
+
+  --color-brown-dark: #423027;
+  --color-brown-main: #574238;
+  --color-brown-soft: #594840;
+
+  --color-green-main: #8a9675;
+  --color-green-variant: #8e9a7a;
+  --color-green-soft: #8a9676;
+
+  --color-gray-main: #4b5563;
+
+  --color-cream-light: #fffcf4;
+  --color-cream-soft: #f9f6f0;
+  --color-cream-muted: #f3ebe4;
+  --color-cream-alt: #eee2db;
+
+  --color-beige-main: #d7c5bc;
+  --color-beige-soft: #d4d7c5;
+  --color-beige-muted: #cccfba;
+  --color-beige-light: #ddded4;
+  --color-beige-variant: #e2e6da;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +68,12 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-fraunces), Arial, Helvetica, sans-serif;
 }
