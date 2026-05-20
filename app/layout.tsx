@@ -6,7 +6,7 @@ import {
   Plus_Jakarta_Sans,
 } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "react-hot-toast";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,17 +46,10 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <Toaster
-          position="top-center"
-          toastOptions={{
-            duration: 4000,
-            className: "",
-            style: {
-              border: "2px solid #423027",
-              padding: "16px",
-              color: "#423027",
-              fontFamily: "--font-plus-jakarta-sans",
-            },
-          }}
+          position="bottom-center"
+          richColors
+          closeButton
+          duration={5000}
         />
       </body>
     </html>

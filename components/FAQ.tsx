@@ -111,7 +111,7 @@ export default function FAQ() {
       <div className="relative w-full max-w-5xl">
         <div className="flex flex-col gap-3 relative z-10">{faqAccordion}</div>
 
-        <div className="absolute top-40 -translate-y-1/2 -right-45 z-20 pointer-events-none hidden lg:block">
+        <div className="absolute top-40 -translate-y-1/2 -right-45 z-20 pointer-events-none hidden 2xl:block">
           <Image
             src="/png/teddy.png"
             alt="Decorative brand element"

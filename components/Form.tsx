@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import toast from "react-hot-toast";
+import { toast } from "sonner";
 
 import {
   waitlistSchema,
@@ -36,12 +36,20 @@ const Form = () => {
       const response = await joinWaitlist(data.email);
 
       if (!response.success) {
-        toast.error(response.message);
+        if (response.message === "Email already joined waitlist") {
+          toast.error("Looks like this email is already on the waitlist.");
+
+          return;
+        }
+
+        toast.error("Something went wrong. Please try again.");
 
         return;
       }
 
-      toast.success(response.message);
+      toast.success(
+        "Thanks for joining the waitlist! You’ll be among the first to know when our gentle baby wipes launch.",
+      );
 
       reset();
     });
