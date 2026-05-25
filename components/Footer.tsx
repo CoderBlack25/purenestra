@@ -2,7 +2,7 @@ import { LuLinkedin, LuFacebook } from "react-icons/lu";
 import { RiTwitterXFill } from "react-icons/ri";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/public/svg/logo.svg";
+import logo from "@/public/png/logo.png";
 
 const date = new Date();
 const year = date.getFullYear();
@@ -19,12 +19,12 @@ const Footer = () => {
               height={25}
               alt="Purenestra"
               priority
-              className="w-30 h-auto"
+              className="w-35 h-auto"
             />
           </div>
 
-          <div className="text-xs text-(--color-brown-dark) font-medium leading-relaxed font-plus-jakarta-sans max-w-md mx-auto lg:mx-0">
-            © {year} PureNest · Clean, gentle, ultra-soft care for baby &
+          <div className="flex items-center justify-center text-xs text-(--color-brown-dark) font-medium leading-relaxed font-plus-jakarta-sans max-w-md mx-auto lg:mx-0">
+            © {year} PureNestra · Clean, gentle, ultra-soft care for baby &
             planet.
           </div>
 

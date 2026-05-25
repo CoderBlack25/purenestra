@@ -49,11 +49,18 @@ const JoinWaitlist = () => {
           Be among the first to <br />
           hold a <span className="text-(--color-green-main)">PureNestra.</span>
         </h1>
+        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-(--color-brown-main) leading-tight">
+          Launching July 1, 2026 — waitlist closes soon.
+        </h2>
 
-        <p className="text-xs sm:text-sm md:text-base text-(--color-brown-dark) font-plus-jakarta-sans max-w-xs sm:max-w-md">
-          Founding members receive early access, a complimentary sample pack,
-          and a gentle 20% off the very first launch.
-        </p>
+        <div className="text-xs sm:text-sm md:text-base text-(--color-brown-dark) font-plus-jakarta-sans max-w-xs sm:max-w-md">
+          <p>Founding members receive:</p>
+          <ul className="font-semibold">
+            <li>Early access — shop before the public</li>
+            <li>A complimentary sample pack</li>
+            <li>20% off your very first order</li>
+          </ul>
+        </div>
 
         <div className="w-28 sm:w-36 md:w-44 lg:w-52 -mb-8 sm:-mb-10 md:-mb-12 z-10">
           <Image
@@ -69,16 +76,19 @@ const JoinWaitlist = () => {
           <Form />
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
-            <Image
+            {/* <Image
               src="/png/people.png"
               alt="people"
               width={95}
               height={40}
               className="w-20 sm:w-24 h-auto object-contain"
-            />
+            /> */}
 
-            <p className="text-(--color-brown-dark) font-plus-jakarta-sans text-xs sm:text-sm">
-              500+ Already in waitlist
+            <p className="text-(--color-brown-dark) font-semibold font-plus-jakarta-sans text-xs sm:text-sm">
+              Be among the first Canadian families to try PureNestra.{" "}
+              <br className="hidden sm:block" />
+              Founding members get early access, a free sample pack, and 20% off
+              at launch.
             </p>
           </div>
 

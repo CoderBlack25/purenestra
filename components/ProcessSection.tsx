@@ -3,13 +3,13 @@ const steps = [
     id: "01",
     title: "Join the nest",
     description:
-      "Drop your email below. No spam — just a single, gentle note when we're ready.",
+      "Drop your email below. No spam — just a single, gentle note when we're ready to ship.",
   },
   {
     id: "02",
     title: "Get early access",
     description:
-      "Waitlist members shop first, with founding-member pricing and a free sample pack.",
+      "Waitlist members shop first — with founding-member pricing, a free sample pack, and 20% off your first order.",
   },
   {
     id: "03",
@@ -33,8 +33,8 @@ export default function ProcessSection() {
         </h2>
 
         <p className="text-(--color-brown-dark) leading-relaxed font-plus-jakarta-sans max-w-xs sm:max-w-md md:max-w-lg text-sm sm:text-base">
-          Every wipe is a quiet promise — to your baby&apos;s skin, and to the
-          world they&apos;ll inherit.
+          Founding members get in first, pay less, and experience PureNestra
+          before anyone else.
         </p>
       </div>
 

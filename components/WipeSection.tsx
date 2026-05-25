@@ -12,14 +12,13 @@ export default function WipeSection() {
 
         <div className="max-w-xs sm:max-w-md md:max-w-2xl mx-auto mb-10 sm:mb-12 md:mb-16">
           <p className="text-(--color-brown-dark) leading-relaxed font-plus-jakarta-sans text-sm sm:text-base md:text-lg">
-            Purenestra was born from a parent&apos;s quiet promise — to care
-            gently, purely, and intentionally.
+            PureNestra was born from real conversations — on Instagram, in
+            WhatsApp group chats, between Canadian parents asking the same quiet
+            question: what is actually safe for my baby&apos;s skin?
             <br className="hidden sm:block" />
-            Every wipe is designed to feel like a loving touch: soft, safe, and
-            kind to delicate skin.
-            <br className="hidden sm:block" />
-            Because the smallest acts of care shape the world our children will
-            grow into.
+            Every wipe is the answer we built together. Soft, safe, and kind to
+            delicate skin — because the smallest acts of care shape the world
+            our children will grow into
           </p>
         </div>
 

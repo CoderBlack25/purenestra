@@ -38,12 +38,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 xl:px-12 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image
-            src="/svg/logo2.svg"
+            src="/png/logo.png"
             width={130}
             height={25}
             alt="Purenestra"
             priority
-            className="w-30 h-auto"
+            className="w-35 h-auto"
           />
         </Link>
 

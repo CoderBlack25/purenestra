@@ -20,40 +20,40 @@ interface FeatureProps {
 
 const features = [
   {
-    title: "99% Pure Water",
+    title: "Nearly 97% Pure Water",
     icon: LuDroplets,
     description:
-      "Every wipe is a quiet promise — to your baby's skin, and to the world they'll inherit.",
+      "The foundation of every wipe. We start with purified water and barely add anything else — because the gentlest cleanser already exists in nature.",
   },
   {
     title: "100% Plant Fiber",
     icon: LuLeaf,
     description:
-      "A whisper-light formula that cleanses without harsh chemicals or residue.",
+      "A whisper-light cloth that cleanses without harsh chemicals or residue. Soft enough for a newborn. Strong enough to actually work.",
   },
   {
     title: "Sensitive Skin Safe",
     icon: LuHeart,
     description:
-      "Hypoallergenic, pH balanced, dermatologist tested. Fragrance-free always.",
+      "Hypoallergenic, pH balanced to 5.0–5.5, and dermatologist tested. Fragrance-free, always. Designed to be safe from day one.",
   },
   {
     title: "Ultra-Soft Touch",
     icon: LuSparkles,
     description:
-      "Every wipe is a quiet promise — to your baby's skin, and to the world they'll inherit.",
+      "100% viscose fiber — softer than cotton and whisper-light against the most delicate skin. Gentle enough for the most tender moments.",
   },
   {
     title: "Free From Nasties",
     icon: LuShieldCheck,
     description:
-      "No alcohol, no parabens, no synthetic fragrance. Just what's needed.",
+      "No alcohol, no parabens, no synthetic fragrance. No unnecessary ingredients. Just what your baby needs — and nothing more.",
   },
   {
     title: "Planet Conscious",
     icon: LuRecycle,
     description:
-      "Biodegradable wipes in recyclable packaging — care that returns to the earth.",
+      "Biodegradable wipes in recyclable packaging. Care that's kind to your baby and to the world they'll grow into.",
   },
 ];
 

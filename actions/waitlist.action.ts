@@ -75,9 +75,7 @@ export async function joinWaitlist(email: string): Promise<ActionResponse> {
 
       subject: "New Waitlist Signup",
 
-      react: WaitlistEmail({
-        email: validatedFields.data.email,
-      }),
+      react: WaitlistEmail(),
     });
 
     return {
