@@ -10,7 +10,7 @@ export default function Hero() {
 
       <div className="absolute bottom-0 left-0 w-full h-48 sm:h-64 md:h-80 bg-linear-to-t from-(--color-cream-muted) via-cream-muted/60 to-transparent pointer-events-none z-0"></div>
 
-      <div className="relative z-10 text-center max-w-2xl px-4 sm:px-6 md:px-8 py-12 md:py-0">
+      <div className="relative z-10 text-center max-w-4xl px-4 sm:px-6 md:px-8 py-12 md:py-0">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-(--color-brown-main) leading-tight mb-4 sm:mb-6">
           Your baby&apos;s skin deserves the <br />{" "}
           <span className="text-[#B58063]">shortest</span> ingredient list

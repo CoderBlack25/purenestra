@@ -15,10 +15,12 @@ import {
   Column,
 } from "@react-email/components";
 
-const baseUrl =
-  process.env.NODE_ENV === "production"
-    ? "https://www.purenestra.com"
-    : "http://localhost:3000";
+// const baseUrl =
+//   process.env.NODE_ENV === "production"
+//     ? "https://www.purenestra.com"
+//     : "http://localhost:3000";
+
+const baseUrl = "https://www.purenestra.com";
 
 const WaitlistEmail = () => {
   return (

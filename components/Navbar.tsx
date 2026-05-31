@@ -63,7 +63,7 @@ export default function Navbar() {
         </div>
 
         <Link
-          href=""
+          href="mailto:info@purenestra.com"
           className="hidden md:block bg-(--color-brown-soft) text-(--color-cream-light) font-medium font-plus-jakarta-sans px-4 py-2 rounded-full text-sm transition hover:opacity-90"
         >
           Contact us
@@ -103,7 +103,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="#contact"
+              href="mailto:info@purenestra.com"
               onClick={() => setIsOpen(false)}
               className="mt-2 text-center bg-(--color-brown-soft) text-(--color-cream-light) px-4 py-2 rounded-full"
             >

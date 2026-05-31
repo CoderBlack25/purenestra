@@ -53,13 +53,14 @@ const JoinWaitlist = () => {
           Launching July 1, 2026 — waitlist closes soon.
         </h2>
 
-        <div className="text-xs sm:text-sm md:text-base text-(--color-brown-dark) font-plus-jakarta-sans max-w-xs sm:max-w-md">
-          <p>Founding members receive:</p>
-          <ul className="font-semibold">
-            <li>Early access — shop before the public</li>
-            <li>A complimentary sample pack</li>
-            <li>20% off your very first order</li>
-          </ul>
+        <div className="text-xs sm:text-sm md:text-base text-(--color-brown-dark) font-plus-jakarta-sans max-w-xs sm:max-w-lg">
+          <p className="">
+            Be among the first Canadian families to try PureNestra.
+          </p>
+          <p className="">
+            Founding members receive early access — shop before the public, a
+            complimentary sample pack, and 20% off your very first order
+          </p>
         </div>
 
         <div className="w-28 sm:w-36 md:w-44 lg:w-52 -mb-8 sm:-mb-10 md:-mb-12 z-10">
@@ -84,14 +85,13 @@ const JoinWaitlist = () => {
               className="w-20 sm:w-24 h-auto object-contain"
             /> */}
 
-            <p className="text-(--color-brown-dark) font-semibold font-plus-jakarta-sans text-xs sm:text-sm">
+            {/* <p className="text-(--color-brown-dark) font-semibold font-plus-jakarta-sans text-xs sm:text-sm">
               Be among the first Canadian families to try PureNestra.{" "}
               <br className="hidden sm:block" />
               Founding members get early access, a free sample pack, and 20% off
               at launch.
-            </p>
+            </p> */}
           </div>
-
           <p className="text-xs sm:text-sm text-(--color-brown-dark) font-plus-jakarta-sans text-center">
             No spam. Unsubscribe anytime. Read our quiet privacy promise.
           </p>

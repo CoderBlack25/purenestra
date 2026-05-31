@@ -1,5 +1,5 @@
-import { LuLinkedin, LuFacebook } from "react-icons/lu";
-import { RiTwitterXFill } from "react-icons/ri";
+import { LuInstagram, LuFacebook } from "react-icons/lu";
+import { RiTiktokLine } from "react-icons/ri";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/png/logo.png";
@@ -30,17 +30,17 @@ const Footer = () => {
 
           <div className="flex items-center justify-center lg:justify-end gap-3">
             <SocialLink
-              href="https://linkedin.com"
-              icon={<LuLinkedin size={18} />}
+              href="https://www.instagram.com/purenestra"
+              icon={<LuInstagram size={18} />}
               label="LinkedIn"
             />
             <SocialLink
-              href="https://twitter.com"
-              icon={<RiTwitterXFill size={18} />}
+              href="https://www.tiktok.com/@purenestra"
+              icon={<RiTiktokLine size={18} />}
               label="Twitter"
             />
             <SocialLink
-              href="https://facebook.com"
+              href="https://www.facebook.com/share/18eSqGsDMX/"
               icon={<LuFacebook size={18} />}
               label="Facebook"
             />

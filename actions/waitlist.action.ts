@@ -1,28 +1,22 @@
 "use server";
 
 import { supabase } from "@/lib/supabase";
-
-import WaitlistEmail from "@/emails/WaitlistEmail";
-
 import { waitlistSchema } from "@/lib/validations/waitlist.schema";
-
 import { MailService } from "@/lib/mail/mail.service";
 
+import WaitlistEmail from "@/emails/WaitlistEmail";
+import AdminNotificationEmail from "@/emails/AdminNotificationEmail";
+
 type ActionResponse =
-  | {
-      success: true;
-      message: string;
-    }
-  | {
-      success: false;
-      message: string;
-    };
+  | { success: true; message: string }
+  | { success: false; message: string };
 
 export async function joinWaitlist(email: string): Promise<ActionResponse> {
   try {
-    const validatedFields = waitlistSchema.safeParse({
-      email,
-    });
+    /**
+     * 1. Validate input
+     */
+    const validatedFields = waitlistSchema.safeParse({ email });
 
     if (!validatedFields.success) {
       return {
@@ -31,19 +25,16 @@ export async function joinWaitlist(email: string): Promise<ActionResponse> {
       };
     }
 
-    /**
-     * Save email to database first
-     */
+    const userEmail = validatedFields.data.email;
 
+    /**
+     * 2. Save to DB
+     */
     const { error } = await supabase.from("waitlist").insert({
-      email: validatedFields.data.email,
+      email: userEmail,
     });
 
     if (error) {
-      /**
-       * PostgreSQL unique constraint violation
-       */
-
       if (error.code === "23505") {
         return {
           success: false,
@@ -60,23 +51,37 @@ export async function joinWaitlist(email: string): Promise<ActionResponse> {
     }
 
     /**
-     * Choose provider here
-     * "resend" | "mailtrap"
+     * 3. Mail service (single instance reused)
      */
-
     const mailService = new MailService("resend");
 
+    const joinedAt = new Date().toISOString();
+
     /**
-     * Send notification email
+     * 4. Send email to CUSTOMER
      */
-
-    await mailService.sendEmail({
-      to: process.env.WAITLIST_RECEIVER_EMAIL as string,
-
-      subject: "New Waitlist Signup",
-
-      react: WaitlistEmail(),
+    const customerEmailPromise = mailService.sendEmail({
+      to: userEmail,
+      subject: "Welcome to PureNestra 💚",
+      react: WaitlistEmail(), // customer template
     });
+
+    /**
+     * 5. Send email to ADMIN
+     */
+    const adminEmailPromise = mailService.sendEmail({
+      to: process.env.WAITLIST_RECEIVER_EMAIL as string,
+      subject: "New Waitlist Signup",
+      react: AdminNotificationEmail({
+        customerEmail: userEmail,
+        joinedAt,
+      }),
+    });
+
+    /**
+     * 6. Run both in parallel
+     */
+    await Promise.all([customerEmailPromise, adminEmailPromise]);
 
     return {
       success: true,
