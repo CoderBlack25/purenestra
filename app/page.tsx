@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CareSection from "@/components/CareSection";
 import ProductFeature from "@/components/ProductFeature";
+import Testimonials from "@/components/Testimonials";
 import ProcessSection from "@/components/ProcessSection";
 import WipeSection from "@/components/WipeSection";
 import FAQ from "@/components/FAQ";
@@ -15,6 +16,7 @@ const page = () => {
       <Hero />
       <CareSection />
       <ProductFeature />
+      <Testimonials />
       <ProcessSection />
       <WipeSection />
       <FAQ />
