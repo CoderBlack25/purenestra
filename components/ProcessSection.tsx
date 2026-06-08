@@ -9,7 +9,7 @@ const steps = [
     id: "02",
     title: "Get early access",
     description:
-      "Waitlist members shop first — with founding-member pricing, a free sample pack, and 20% off your first order.",
+      "Waitlist members shop first — with founding-member pricing, a free sample pack, and 10% off your first order.",
   },
   {
     id: "03",

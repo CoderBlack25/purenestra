@@ -59,7 +59,7 @@ const JoinWaitlist = () => {
           </p>
           <p className="">
             Founding members receive early access — shop before the public, a
-            complimentary sample pack, and 20% off your very first order
+            complimentary sample pack, and 10% off your very first order
           </p>
         </div>
 
