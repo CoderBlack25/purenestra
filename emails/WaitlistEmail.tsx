@@ -143,7 +143,7 @@ const WaitlistEmail = () => {
 
               <Column style={benefitTextWrapper}>
                 <Text style={benefitTitle}>
-                  Exclusive 20% off your first order
+                  Exclusive 10% off your first order
                 </Text>
 
                 <Text style={benefitDescription}>Our thank you to you</Text>
