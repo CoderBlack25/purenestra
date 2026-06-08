@@ -179,27 +179,27 @@ const WaitlistEmail = () => {
             </Column>
 
             <Column align="right">
-              <Link href="https://linkedin.com/company/purenestra">
+              <Link href="https://www.instagram.com/purenestra">
                 <Img
-                  src={`${baseUrl}/linkedin.png`}
+                  src={`${baseUrl}/instagram.png`}
                   width="32"
                   height="32"
-                  alt="LinkedIn"
+                  alt="Instagram"
                   style={socialIcon}
                 />
               </Link>
 
-              <Link href="https://x.com/purenestra">
+              <Link href="https://www.tiktok.com/@purenestra">
                 <Img
-                  src={`${baseUrl}/twitter.png`}
+                  src={`${baseUrl}/tiktok.png`}
                   width="32"
                   height="32"
-                  alt="Twitter"
+                  alt="Tiktok"
                   style={socialIcon}
                 />
               </Link>
 
-              <Link href="https://facebook.com/purenestra">
+              <Link href="https://www.facebook.com/share/18eSqGsDMX/">
                 <Img
                   src={`${baseUrl}/facebook.png`}
                   width="32"
