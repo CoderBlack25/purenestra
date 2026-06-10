@@ -18,7 +18,7 @@ export default function WipeSection() {
             <br className="hidden sm:block" />
             Every wipe is the answer we built together. Soft, safe, and kind to
             delicate skin — because the smallest acts of care shape the world
-            our children will grow into
+            our children will grow into.
           </p>
         </div>
 

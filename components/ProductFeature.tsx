@@ -14,9 +14,9 @@ interface Ingredient {
 const ingredients: Ingredient[] = [
   {
     name: "Purified Water",
-    description: "96.8% — the gentle base",
+    description: "99% — the gentle base",
     details:
-      "The foundation of every wipe. Nearly 97% pure water, because the gentlest cleanser already exists in nature.",
+      "The foundation of every wipe. Nearly 99% pure water, because the gentlest cleanser already exists in nature.",
   },
   {
     name: "Vegetable Glycerin",

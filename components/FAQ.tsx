@@ -14,7 +14,7 @@ const faqs: FAQItem[] = [
   {
     question: "When will PureNestra be available?",
     answer:
-      "PureNestra launches July 1, 2026. Waitlist members will receive early access before the public launch date.",
+      "PureNestra launches September 1, 2026. Waitlist members will receive early access before the public launch date.",
   },
   {
     question: "Are PureNestra wipes safe for newborns?",
@@ -29,7 +29,7 @@ const faqs: FAQItem[] = [
   {
     question: "What's in the formula?",
     answer:
-      "Purified Water (96.8%), Vegetable Glycerin, Panthenol (Pro-Vitamin B5), Caprylyl Glycol, Ethylhexylglycerin, Bisabolol (Natural Chamomile), Citric Acid, Trisodium EDDS. That's the whole list.",
+      "Purified Water (99%), Vegetable Glycerin, Panthenol (Pro-Vitamin B5), Caprylyl Glycol, Ethylhexylglycerin, Bisabolol (Natural Chamomile), Citric Acid, Trisodium EDDS. That's the whole list.",
   },
   {
     question: "Does joining the waitlist cost anything?",

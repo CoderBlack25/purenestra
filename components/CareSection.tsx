@@ -20,7 +20,7 @@ interface FeatureProps {
 
 const features = [
   {
-    title: "Nearly 97% Pure Water",
+    title: "Nearly 99% Pure Water",
     icon: LuDroplets,
     description:
       "The foundation of every wipe. We start with purified water and barely add anything else — because the gentlest cleanser already exists in nature.",

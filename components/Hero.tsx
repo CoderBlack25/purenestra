@@ -18,7 +18,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-(--color-brown-dark) text-sm sm:text-base font-plus-jakarta-sans mb-5 sm:mb-6 leading-relaxed max-w-xl mx-auto">
-          PureNest baby wipes contains nearly 97% purified water. 100% plant
+          PureNest baby wipes contains nearly 99% purified water. 100% plant
           fiber. Pro-Vitamin B5 and natural chamomile for skin that stays soft
           and calm.
         </p>
