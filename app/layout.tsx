@@ -8,6 +8,7 @@ import {
 import "./globals.css";
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,6 +54,7 @@ export default function RootLayout({
           duration={5000}
         />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
