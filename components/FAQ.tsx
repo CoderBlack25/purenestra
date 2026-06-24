@@ -14,28 +14,38 @@ const faqs: FAQItem[] = [
   {
     question: "When will PureNestra be available?",
     answer:
-      "PureNestra launches September 1, 2026. Waitlist members will receive early access before the public launch date.",
+      "We’re working behind the scenes and will announce our launch date soon. Waitlist members hear first, join so you won’t miss it.",
   },
   {
-    question: "Are PureNestra wipes safe for newborns?",
+    question: "What makes PureNestra different?",
     answer:
-      "Yes. PureNestra wipes are hypoallergenic, fragrance-free, and pH balanced to 5.0–5.5 — matched to a newborn's natural skin. Every ingredient is selected for the most sensitive skin from day one.",
+      "PureNestra is 2X wider than most wipes and the first to combine Panthenol and Bisabolol which are ingredients that actively soothe and nourish skin, not just clean it. Everything inside is plant-based, pH-balanced, and dermatologist tested. Nothing hidden. Nothing extra.",
   },
   {
-    question: "Are the wipes truly biodegradable?",
+    question: "Why should I join the waitlist?",
     answer:
-      "Yes. The wipe cloth is 100% plant-based fiber — fully biodegradable and kind to the earth your little one will grow into.",
+      "You’ll get 10% off at launch, early access before the general public, and exclusive updates and sneak peeks",
   },
-  {
-    question: "What's in the formula?",
-    answer:
-      "Purified Water (99%), Vegetable Glycerin, Panthenol (Pro-Vitamin B5), Caprylyl Glycol, Ethylhexylglycerin, Bisabolol (Natural Chamomile), Citric Acid, Trisodium EDDS. That's the whole list.",
-  },
-  {
-    question: "Does joining the waitlist cost anything?",
-    answer:
-      "Not at all. Joining is free. You'll receive one gentle email when PureNestra is ready to ship — nothing more.",
-  },
+  // {
+  //   question: "Are PureNestra wipes safe for newborns?",
+  //   answer:
+  //     "Yes. PureNestra wipes are hypoallergenic, fragrance-free, and pH balanced to 5.0–5.5 — matched to a newborn's natural skin. Every ingredient is selected for the most sensitive skin from day one.",
+  // },
+  // {
+  //   question: "Are the wipes truly biodegradable?",
+  //   answer:
+  //     "Yes. The wipe cloth is 100% plant-based fiber — fully biodegradable and kind to the earth your little one will grow into.",
+  // },
+  // {
+  //   question: "What's in the formula?",
+  //   answer:
+  //     "Purified Water (99%), Vegetable Glycerin, Panthenol (Pro-Vitamin B5), Caprylyl Glycol, Ethylhexylglycerin, Bisabolol (Natural Chamomile), Citric Acid, Trisodium EDDS. That's the whole list.",
+  // },
+  // {
+  //   question: "Does joining the waitlist cost anything?",
+  //   answer:
+  //     "Not at all. Joining is free. You'll receive one gentle email when PureNestra is ready to ship — nothing more.",
+  // },
 ];
 
 export default function FAQ() {

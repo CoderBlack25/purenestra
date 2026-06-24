@@ -54,8 +54,8 @@ export default function Navbar() {
           <Link href="#formula" className="hover:font-semibold">
             Formula
           </Link>
-          <Link href="#ritual" className="hover:font-semibold">
-            Ritual
+          <Link href="#testimonials" className="hover:font-semibold">
+            Testimonials
           </Link>
           <Link href="#questions" className="hover:font-semibold">
             Questions
@@ -95,8 +95,8 @@ export default function Navbar() {
             <Link href="#formula" onClick={() => setIsOpen(false)}>
               Formula
             </Link>
-            <Link href="#ritual" onClick={() => setIsOpen(false)}>
-              Ritual
+            <Link href="#testimonials" onClick={() => setIsOpen(false)}>
+              Testimonials
             </Link>
             <Link href="#questions" onClick={() => setIsOpen(false)}>
               Questions

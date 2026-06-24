@@ -46,22 +46,10 @@ const JoinWaitlist = () => {
 
       <div className="max-w-2xl w-full text-center flex flex-col items-center gap-5 sm:gap-6">
         <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl text-(--color-brown-main) leading-tight">
-          Be among the first to <br />
-          hold a <span className="text-(--color-green-main)">PureNestra.</span>
+          Be among the first parents <br />
+          to experience{" "}
+          <span className="text-(--color-green-main)">PureNestra.</span>
         </h1>
-        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-(--color-brown-main) leading-tight">
-          Launching September 1, 2026 — waitlist closes soon.
-        </h2>
-
-        <div className="text-xs sm:text-sm md:text-base text-(--color-brown-dark) font-plus-jakarta-sans max-w-xs sm:max-w-lg">
-          <p className="">
-            Be among the first Canadian families to try PureNestra.
-          </p>
-          <p className="">
-            Founding members receive early access — shop before the public, a
-            complimentary sample pack, and 10% off your very first order
-          </p>
-        </div>
 
         <div className="w-28 sm:w-36 md:w-44 lg:w-52 -mb-8 sm:-mb-10 md:-mb-12 z-10">
           <Image
@@ -77,7 +65,8 @@ const JoinWaitlist = () => {
           <Form />
 
           <p className="text-xs sm:text-sm text-(--color-brown-dark) font-plus-jakarta-sans text-center">
-            No spam. Unsubscribe anytime. Read our quiet privacy promise.
+            Join the waitlist and get 10% off at launch, early access, and
+            exclusive updates.
           </p>
         </div>
       </div>

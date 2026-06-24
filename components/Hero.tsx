@@ -12,21 +12,20 @@ export default function Hero() {
 
       <div className="relative z-10 text-center max-w-4xl px-4 sm:px-6 md:px-8 py-12 md:py-0">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-(--color-brown-main) leading-tight mb-4 sm:mb-6">
-          Your baby&apos;s skin deserves the <br />{" "}
-          <span className="text-[#B58063]">shortest</span> ingredient list
-          possible.
+          <span className="text-[#B58063]">2X wider</span>, ultra soft, and
+          built for skin that deserves better.
         </h1>
 
         <p className="text-(--color-brown-dark) text-sm sm:text-base font-plus-jakarta-sans mb-5 sm:mb-6 leading-relaxed max-w-xl mx-auto">
-          PureNest baby wipes contains nearly 99% purified water. 100% plant
-          fiber. Pro-Vitamin B5 and natural chamomile for skin that stays soft
-          and calm.
+          PureNestra is the first baby wipe with Panthenol and Bisabolol which
+          are skin-loving ingredients that soothe, nourish, and actively protect
+          your baby&apos;s sensitive skin with every wipe.
         </p>
 
         <Form />
 
         <p className="text-(--color-brown-dark) text-xs sm:text-sm md:text-base font-plus-jakarta-sans leading-relaxed">
-          No spam. Unsubscribe anytime. Read our quiet privacy promise.
+          Join the Waitlist & Get 10% Off at Launch
         </p>
       </div>
     </section>
