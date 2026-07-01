@@ -13,7 +13,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-24 bg-(--color-cream-muted)">
+    <section id="testimonials" className="py-24 bg-(--color-cream-alt)">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex rounded-full border px-4 py-1 text-sm font-medium font-plus-jakarta-sans text-(--color-brown-dark)">

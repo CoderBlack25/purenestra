@@ -3,12 +3,14 @@ import {
   Geist,
   Geist_Mono,
   Fraunces,
-  Plus_Jakarta_Sans,
-} from "next/font/google";
+  Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { cn } from "@/lib/utils";
+
+const jetbrainsMono = JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,7 +45,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} ${plusJakartaSans.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, fraunces.variable, plusJakartaSans.variable, "font-mono", jetbrainsMono.variable)}
     >
       <body className="min-h-full flex flex-col">
         {children}

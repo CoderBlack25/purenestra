@@ -1,16 +1,26 @@
+import Image from "next/image";
 import Form from "@/components/Form";
 
 export default function Hero() {
   return (
-    <section
-      className="relative w-full min-h-[85vh] md:min-h-[90vh] bg-cover bg-center bg-no-repeat flex items-center justify-center selection:bg-[#d6c7bc]"
-      style={{ backgroundImage: "url('/png/hero-image.png')" }}
-    >
-      <div className="absolute inset-0 bg-white/10 pointer-events-none"></div>
+    <section className="relative flex min-h-[85vh] w-full items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat md:min-h-[90vh] selection:bg-[#d6c7bc]">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/png/hero-image.png"
+          alt=""
+          aria-hidden="true"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-48 sm:h-64 md:h-80 bg-linear-to-t from-(--color-cream-muted) via-cream-muted/60 to-transparent pointer-events-none z-0"></div>
+      <div className="absolute inset-0 z-1 bg-white/10 pointer-events-none"></div>
 
-      <div className="relative z-10 text-center max-w-4xl px-4 sm:px-6 md:px-8 py-12 md:py-0">
+      <div className="absolute bottom-0 left-0 z-2 h-48 w-full bg-linear-to-t from-(--color-cream-muted) via-cream-muted/60 to-transparent pointer-events-none sm:h-64 md:h-80"></div>
+
+      <div className="relative z-10 max-w-4xl px-4 py-12 text-center sm:px-6 sm:py-12 md:px-8 md:py-0">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-(--color-brown-main) leading-tight mb-4 sm:mb-6">
           <span className="text-[#B58063]">2X wider</span>, ultra soft, and
           built for skin that deserves better.

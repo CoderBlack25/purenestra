@@ -1,8 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import WipeCarouselSection from "@/components/WipeCarouselSection";
 import CareSection from "@/components/CareSection";
-import WipeSection from "@/components/WipeSection";
-import ProductFeature from "@/components/ProductFeature";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import JoinWaitlist from "@/components/JoinWaitlist";
@@ -13,9 +12,8 @@ const page = () => {
     <main>
       <Navbar />
       <Hero />
+      <WipeCarouselSection />
       <CareSection />
-      <WipeSection />
-      <ProductFeature />
       <Testimonials />
       <FAQ />
       <JoinWaitlist />

@@ -26,26 +26,6 @@ const faqs: FAQItem[] = [
     answer:
       "You’ll get 10% off at launch, early access before the general public, and exclusive updates and sneak peeks",
   },
-  // {
-  //   question: "Are PureNestra wipes safe for newborns?",
-  //   answer:
-  //     "Yes. PureNestra wipes are hypoallergenic, fragrance-free, and pH balanced to 5.0–5.5 — matched to a newborn's natural skin. Every ingredient is selected for the most sensitive skin from day one.",
-  // },
-  // {
-  //   question: "Are the wipes truly biodegradable?",
-  //   answer:
-  //     "Yes. The wipe cloth is 100% plant-based fiber — fully biodegradable and kind to the earth your little one will grow into.",
-  // },
-  // {
-  //   question: "What's in the formula?",
-  //   answer:
-  //     "Purified Water (99%), Vegetable Glycerin, Panthenol (Pro-Vitamin B5), Caprylyl Glycol, Ethylhexylglycerin, Bisabolol (Natural Chamomile), Citric Acid, Trisodium EDDS. That's the whole list.",
-  // },
-  // {
-  //   question: "Does joining the waitlist cost anything?",
-  //   answer:
-  //     "Not at all. Joining is free. You'll receive one gentle email when PureNestra is ready to ship — nothing more.",
-  // },
 ];
 
 export default function FAQ() {
@@ -114,21 +94,21 @@ export default function FAQ() {
     >
       <div className="max-w-2xl text-center mb-12">
         <h2 className="text-2xl sm:text-3xl md:text-5xl text-(--color-brown-main) leading-tight">
-          Quiet answers to <br /> common questions.
+          FAQs
         </h2>
       </div>
 
       <div className="relative w-full max-w-5xl">
         <div className="flex flex-col gap-3 relative z-10">{faqAccordion}</div>
 
-        <div className="absolute top-40 -translate-y-1/2 -right-45 z-20 pointer-events-none hidden 2xl:block">
+        <div className="absolute top-26 -translate-y-1/2 -right-37 z-20 pointer-events-none hidden lg:block">
           <Image
             src="/png/teddy.png"
             alt="Decorative brand element"
-            width={150}
-            height={150}
+            width={120}
+            height={120}
             priority
-            className="object-contain drop-shadow-md w-auto h-auto"
+            className="object-contain drop-shadow-md w-30 sm:w-40 h-auto"
           />
         </div>
       </div>
