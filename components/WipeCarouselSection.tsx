@@ -52,8 +52,13 @@ export default function WipeCarouselSection() {
           </h2>
 
           <p className="mt-4 text-lg leading-relaxed text-(--color-brown-dark) font-plus-jakarta-sans">
-            From the first clean to the busiest diaper change, PureNestra is
-            made to feel soft, soothing, and reassuring every single time.
+            Babies have delicate, developing skin. What touches it every day
+            should be chosen with care.
+          </p>
+          <p className="mt-4 text-lg leading-relaxed text-(--color-brown-dark) font-plus-jakarta-sans">
+            That&apos;s why PureNestra is thoughtfully designed with better
+            ingredients, bigger wipes, extra durable, and gentler on sensitive
+            skin.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">

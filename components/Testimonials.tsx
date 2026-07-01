@@ -16,12 +16,12 @@ const Testimonials = () => {
     <section id="testimonials" className="py-24 bg-(--color-cream-alt)">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex rounded-full border px-4 py-1 text-sm font-medium font-plus-jakarta-sans text-(--color-brown-dark)">
+          <span className="inline-flex rounded-full border border-muted-foreground px-4 py-1 text-sm font-medium font-plus-jakarta-sans text-(--color-brown-dark)">
             Early Feedback
           </span>
 
           <h2 className="mt-6 text-3xl tracking-tight md:text-5xl text-(--color-brown-main)">
-            Loved by Early Testers
+            Tested and loved by other parents too
           </h2>
 
           <p className="mt-4 text-lg text-(--color-brown-dark) font-plus-jakarta-sans">
