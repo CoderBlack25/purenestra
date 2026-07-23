@@ -64,7 +64,7 @@ const WaitlistEmail = () => {
 
           <Section>
             <Img
-              src={`${baseUrl}/email-baby.png`}
+              src={`${baseUrl}/png/wipe4.png`}
               width="100%"
               alt="Baby wipes"
               style={heroImage}
@@ -73,21 +73,23 @@ const WaitlistEmail = () => {
 
           <Section style={contentSection}>
             <Heading style={heading}>
-              Welcome to Pure<span style={span}>Nestra</span>
+              Welcome to the<span style={span}> Nest!!</span>
             </Heading>
 
-            <Text style={paragraph}>We’re so happy you’re here.</Text>
+            <Text style={paragraph}>We're so glad you're here.🤍</Text>
 
             <Text style={paragraph}>
-              You’ve officially joined the waitlist to be among the very first
-              parents to experience our thoughtfully crafted baby wipes.
+              You've just joined something that started as a mum’s worry and a decision that something better had to exist for her baby's skin. That's  PureNestra. And you're now among the very first parents to be part of it.
+            </Text>
+
+            <Text style={paragraph}>
+              This isn't just a waitlist. You're a founding member of the Nest, and that means something to us.
             </Text>
           </Section>
 
           <Section style={benefitsSection}>
             <Heading style={benefitsHeading}>
-              As a founding member, here’s what <span style={span}>you’ll</span>{" "}
-              get:
+              Here's what <span style={span}>you’ve</span> unlocked:
             </Heading>
 
             <Row style={benefitItem}>
@@ -103,16 +105,16 @@ const WaitlistEmail = () => {
 
               <Column style={benefitTextWrapper}>
                 <Text style={benefitTitle}>
-                  Early access before public launch
+                  Early access before everyone else
                 </Text>
 
                 <Text style={benefitDescription}>
-                  Be the first to try PureNestra
+                  You'll be first through the door when PureNestra launches. Before the public. Before anyone else.
                 </Text>
               </Column>
             </Row>
 
-            <Row style={benefitItem}>
+            {/* <Row style={benefitItem}>
               <Column width="68" style={iconColumn}>
                 <Img
                   src={`${baseUrl}/sample-icon.png`}
@@ -128,7 +130,7 @@ const WaitlistEmail = () => {
 
                 <Text style={benefitDescription}>Our gentle care, on us.</Text>
               </Column>
-            </Row>
+            </Row> */}
 
             <Row style={benefitItem}>
               <Column width="68" style={iconColumn}>
@@ -143,10 +145,10 @@ const WaitlistEmail = () => {
 
               <Column style={benefitTextWrapper}>
                 <Text style={benefitTitle}>
-                  Exclusive 10% off your first order
+                  10% off your first order
                 </Text>
 
-                <Text style={benefitDescription}>Our thank you to you</Text>
+                <Text style={benefitDescription}>Our thank you for saying yes early. It'll be waiting for you at launch on your first order.</Text>
               </Column>
             </Row>
 
@@ -163,13 +165,25 @@ const WaitlistEmail = () => {
 
               <Column style={benefitTextWrapper}>
                 <Text style={benefitTitle}>
-                  First updates on new releases & surprises
+                  First to know everything
                 </Text>
 
-                <Text style={benefitDescription}>Stay in the know</Text>
+                <Text style={benefitDescription}>New releases, behind-the-scenes updates, surprises. You'll always hear it here first.</Text>
               </Column>
             </Row>
           </Section>
+
+          <Text style={paragraph}>
+            And if you ever have a question, just reply to this email. We actually read them. 🤍
+          </Text>
+
+          <Text style={paragraph}>
+            Nestly yours,
+          </Text>
+
+          <Text style={paragraph2}>
+            From PureNestra Team
+          </Text>
 
           <Hr style={divider} />
 
@@ -264,6 +278,13 @@ const paragraph = {
   fontSize: "14px",
   lineHeight: "1.6",
   color: "#423027",
+};
+
+const paragraph2 = {
+  fontSize: "14px",
+  lineHeight: "1.6",
+  color: "#423027",
+  fontWeight: "700",
 };
 
 const span = {
