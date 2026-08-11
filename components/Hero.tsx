@@ -3,10 +3,13 @@ import Form from "@/components/Form";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[85vh] w-full items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat md:min-h-[90vh] selection:bg-[#d6c7bc]">
+    <section
+      id="home"
+      className="relative flex min-h-[85dvh] w-full items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat md:min-h-[90dvh] selection:bg-[#d6c7bc] scroll-mt-24"
+    >
       <div className="absolute inset-0 z-0">
         <Image
-          src="/png/hero-image.png"
+          src="/png/hero-image.webp"
           alt=""
           aria-hidden="true"
           fill

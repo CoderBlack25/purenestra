@@ -11,33 +11,30 @@ import {
 
 const galleryImages = [
   {
-    src: "/png/wipe.png",
+    src: "/png/wipe.webp",
     alt: "PureNestra wipe in a soft, clean presentation",
   },
   {
-    src: "/png/wipe2.png",
+    src: "/png/wipe2.webp",
     alt: "PureNestra wipe close-up showing the soft fabric",
   },
   {
-    src: "/png/wipe3.png",
+    src: "/png/wipe3.webp",
     alt: "PureNestra wipe highlighting the gentle texture",
   },
   {
-    src: "/png/wipe4.png",
+    src: "/png/wipe4.webp",
     alt: "PureNestra wipe showcased in a calm, premium setting",
   },
   {
-    src: "/png/wipe5.png",
+    src: "/png/wipe5.webp",
     alt: "PureNestra wipe showcased in a calm, premium setting",
   },
 ];
 
 export default function WipeCarouselSection() {
   return (
-    <section
-      id="home"
-      className="relative overflow-hidden bg-(--color-cream-muted) py-16 sm:py-20 md:py-24 selection:bg-[#d6c7bc] scroll-mt-16"
-    >
+    <section className="relative overflow-hidden bg-(--color-cream-muted) py-16 sm:py-20 md:py-24 selection:bg-[#d6c7bc]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(181,128,99,0.12),transparent_42%)]" />
 
       <div className="relative mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 md:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
@@ -93,8 +90,8 @@ export default function WipeCarouselSection() {
               ))}
             </CarouselContent>
 
-            <CarouselPrevious className="left-2 top-1/2 h-10 w-10 -translate-y-1/2 rounded-full border-0 bg-white/90 text-(--color-brown-main) shadow-sm hover:bg-white" />
-            <CarouselNext className="right-2 top-1/2 h-10 w-10 -translate-y-1/2 rounded-full border-0 bg-white/90 text-(--color-brown-main) shadow-sm hover:bg-white" />
+            <CarouselPrevious className="left-2 top-1/2 size-10 -translate-y-1/2 rounded-full border-0 bg-white/90 text-(--color-brown-main) shadow-sm hover:bg-white" />
+            <CarouselNext className="right-2 top-1/2 size-10 -translate-y-1/2 rounded-full border-0 bg-white/90 text-(--color-brown-main) shadow-sm hover:bg-white" />
           </Carousel>
         </div>
       </div>

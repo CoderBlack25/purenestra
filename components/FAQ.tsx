@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useId, useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import Image from "next/image";
 
@@ -29,12 +28,10 @@ const faqs: FAQItem[] = [
 ];
 
 export default function FAQ() {
-  //const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [openIndexes, setOpenIndexes] = useState<number[]>([]);
 
-  // const toggleAccordion = (index: number) => {
-  //   setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
-  // };
+  const accordionId = useId();
+
   const toggleAccordion = (index: number) => {
     setOpenIndexes((prevIndexes) =>
       prevIndexes.includes(index)
@@ -44,46 +41,53 @@ export default function FAQ() {
   };
 
   const faqAccordion = faqs.map((faq, index) => {
-    //const isOpen = openIndex === index;
     const isOpen = openIndexes.includes(index);
 
+    const triggerId = `${accordionId}-trigger-${index}`;
+    const panelId = `${accordionId}-panel-${index}`;
+
     return (
-      <motion.div
+      <div
         key={index}
-        initial={false}
         className="bg-(--color-cream-alt) rounded-2xl overflow-hidden shadow-sm"
       >
         <button
+          id={triggerId}
+          type="button"
+          aria-expanded={isOpen}
+          aria-controls={panelId}
           onClick={() => toggleAccordion(index)}
           className="w-full flex items-center justify-between px-6 py-5 text-left text-(--color-brown-main) transition-colors hover:bg-[#e6dcd4]"
         >
           <span className="text-[1.05rem] font-medium tracking-wide">
             {faq.question}
           </span>
-          <motion.div
-            animate={{ rotate: isOpen ? 180 : 0 }}
-            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="text-(--color-brown-main)"
-          >
-            <FiChevronDown size={20} />
-          </motion.div>
+          <FiChevronDown
+            size={20}
+            className={`shrink-0 text-(--color-brown-main) transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+              isOpen ? "rotate-180" : "rotate-0"
+            }`}
+          />
         </button>
 
-        <AnimatePresence initial={false}>
-          {isOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <div className="px-6 pb-5 text-(--color-brown-dark) font-plus-jakarta-sans text-sm leading-relaxed max-w-[90%]">
-                {faq.answer}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.div>
+        {/* 0fr -> 1fr animates the row to its content height without measuring it in JS.
+            `inert` keeps the collapsed copy out of the tab order and the a11y tree. */}
+        <div
+          id={panelId}
+          role="region"
+          aria-labelledby={triggerId}
+          inert={!isOpen}
+          className={`grid transition-[grid-template-rows,opacity] duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+          }`}
+        >
+          <div className="overflow-hidden">
+            <div className="px-6 pb-5 text-(--color-brown-dark) font-plus-jakarta-sans text-sm leading-relaxed max-w-[90%]">
+              {faq.answer}
+            </div>
+          </div>
+        </div>
+      </div>
     );
   });
 
@@ -103,7 +107,7 @@ export default function FAQ() {
 
         <div className="absolute top-26 -translate-y-1/2 -right-37 z-20 pointer-events-none hidden lg:block">
           <Image
-            src="/png/teddy.png"
+            src="/png/teddy.webp"
             alt="Decorative brand element"
             width={120}
             height={120}

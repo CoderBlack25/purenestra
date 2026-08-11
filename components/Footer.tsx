@@ -32,17 +32,17 @@ const Footer = () => {
             <SocialLink
               href="https://www.instagram.com/purenestra"
               icon={<LuInstagram size={18} />}
-              label="LinkedIn"
+              label="PureNestra on Instagram"
             />
             <SocialLink
               href="https://www.tiktok.com/@purenestra"
               icon={<RiTiktokLine size={18} />}
-              label="Twitter"
+              label="PureNestra on TikTok"
             />
             <SocialLink
               href="https://www.facebook.com/share/18eSqGsDMX/"
               icon={<LuFacebook size={18} />}
-              label="Facebook"
+              label="PureNestra on Facebook"
             />
           </div>
         </div>

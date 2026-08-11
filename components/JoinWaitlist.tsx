@@ -6,7 +6,7 @@ const JoinWaitlist = () => {
     <section className="relative w-full flex items-center justify-center bg-linear-to-b from-(--color-cream-muted) to-[#D2D6C3] overflow-hidden px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 pt-14 sm:pt-16 md:pt-20 selection:bg-[#d6c7bc]">
       <div className="absolute top-10 left-6 lg:left-24 hidden lg:block">
         <Image
-          src="/png/sun.png"
+          src="/png/sun.webp"
           alt="sun"
           width={120}
           height={120}
@@ -16,7 +16,7 @@ const JoinWaitlist = () => {
 
       <div className="absolute right-6 top-1/3 lg:right-24 hidden lg:block">
         <Image
-          src="/png/butterfly.png"
+          src="/png/butterfly.webp"
           alt="butterfly"
           width={160}
           height={160}
@@ -26,7 +26,7 @@ const JoinWaitlist = () => {
 
       <div className="absolute bottom-0 left-4 lg:left-24 hidden lg:block">
         <Image
-          src="/png/leaf-left.png"
+          src="/png/leaf-left.webp"
           alt="leaf decoration"
           width={160}
           height={160}
@@ -36,7 +36,7 @@ const JoinWaitlist = () => {
 
       <div className="absolute bottom-0 right-4 lg:right-24 hidden lg:block">
         <Image
-          src="/png/leaf-right.png"
+          src="/png/leaf-right.webp"
           alt="leaf decoration"
           width={160}
           height={160}
@@ -45,15 +45,15 @@ const JoinWaitlist = () => {
       </div>
 
       <div className="max-w-2xl w-full text-center flex flex-col items-center gap-5 sm:gap-6">
-        <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl text-(--color-brown-main) leading-tight">
+        <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl text-(--color-brown-main) leading-tight">
           Be among the first parents <br />
           to experience{" "}
           <span className="text-(--color-green-main)">PureNestra.</span>
-        </h1>
+        </h2>
 
         <div className="w-28 sm:w-36 md:w-44 lg:w-52 -mb-8 sm:-mb-10 md:-mb-12 z-10">
           <Image
-            src="/png/baby.png"
+            src="/png/baby.webp"
             alt="baby"
             width={220}
             height={220}

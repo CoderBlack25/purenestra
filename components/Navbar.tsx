@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useId, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -9,12 +9,20 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
+  const menuId = useId();
+  const toggleRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      // Bail out before touching state so scrolling does not queue a render per frame.
+      setIsScrolled((prev) => {
+        const next = window.scrollY > 50;
+        return prev === next ? prev : next;
+      });
     };
 
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -26,6 +34,22 @@ export default function Navbar() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Escape closes the mobile menu and hands focus back to the control that opened it,
+  // so keyboard users are not dropped at the top of the document.
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+
+      setIsOpen(false);
+      toggleRef.current?.focus();
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen]);
 
   return (
     <nav
@@ -70,22 +94,32 @@ export default function Navbar() {
         </Link>
 
         <button
+          ref={toggleRef}
+          type="button"
           className="md:hidden text-(--color-brown-dark)"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
+          onClick={() => setIsOpen((prev) => !prev)}
+          aria-expanded={isOpen}
+          aria-controls={menuId}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
         </button>
       </div>
 
-      {isOpen && (
-        <div
-          className={`md:hidden px-4 overflow-hidden transition-all duration-300 ease-in-out ${
-            isOpen ? "max-h-96 opacity-100 mt-2 pb-4" : "max-h-0 opacity-0"
-          }`}
-        >
+      {/* Stays mounted so it can animate both ways and so aria-controls always
+          resolves; `inert` keeps it out of the tab order while collapsed. */}
+      <div
+        id={menuId}
+        inert={!isOpen}
+        className={`md:hidden grid px-4 transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
+          isOpen
+            ? "grid-rows-[1fr] opacity-100 mt-2 pb-4"
+            : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden">
           <div
-            className={`flex flex-col gap-4 bg-(--color-cream-soft) rounded-2xl p-4 shadow-md text-(--color-brown-dark) font-plus-jakarta-sans transform transition-all duration-300 ease-in-out ${
+            className={`flex flex-col gap-4 bg-(--color-cream-soft) rounded-2xl p-4 shadow-md text-(--color-brown-dark) font-plus-jakarta-sans transition-transform duration-300 ease-in-out ${
               isOpen ? "translate-y-0 scale-100" : "-translate-y-4 scale-95"
             }`}
           >
@@ -111,7 +145,7 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 }

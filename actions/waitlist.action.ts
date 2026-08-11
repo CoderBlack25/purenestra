@@ -7,29 +7,32 @@ import { MailService } from "@/lib/mail/mail.service";
 import WaitlistEmail from "@/emails/WaitlistEmail";
 import AdminNotificationEmail from "@/emails/AdminNotificationEmail";
 
-type ActionResponse =
-  | { success: true; message: string }
-  | { success: false; message: string };
+/**
+ * Messages are display-ready so the client never branches on copy.
+ */
+export type WaitlistFormState = {
+  status: "success" | "error";
+  message: string;
+} | null;
 
-export async function joinWaitlist(email: string): Promise<ActionResponse> {
+export async function joinWaitlist(
+  _prevState: WaitlistFormState,
+  formData: FormData,
+): Promise<WaitlistFormState> {
   try {
-    /**
-     * 1. Validate input
-     */
-    const validatedFields = waitlistSchema.safeParse({ email });
+    const validatedFields = waitlistSchema.safeParse({
+      email: formData.get("email"),
+    });
 
     if (!validatedFields.success) {
       return {
-        success: false,
-        message: "Invalid email address",
+        status: "error",
+        message: "Please enter a valid email address.",
       };
     }
 
     const userEmail = validatedFields.data.email;
 
-    /**
-     * 2. Save to DB
-     */
     const { error } = await supabase.from("waitlist").insert({
       email: userEmail,
     });
@@ -37,38 +40,29 @@ export async function joinWaitlist(email: string): Promise<ActionResponse> {
     if (error) {
       if (error.code === "23505") {
         return {
-          success: false,
-          message: "Email already joined waitlist",
+          status: "error",
+          message: "Looks like this email is already on the waitlist.",
         };
       }
 
       console.error("Supabase error:", error);
 
       return {
-        success: false,
-        message: "Failed to join waitlist",
+        status: "error",
+        message: "Something went wrong. Please try again.",
       };
     }
 
-    /**
-     * 3. Mail service (single instance reused)
-     */
     const mailService = new MailService("resend");
 
     const joinedAt = new Date().toISOString();
 
-    /**
-     * 4. Send email to CUSTOMER
-     */
     const customerEmailPromise = mailService.sendEmail({
       to: userEmail,
       subject: "Welcome to PureNestra 💚",
-      react: WaitlistEmail(), // customer template
+      react: WaitlistEmail(),
     });
 
-    /**
-     * 5. Send email to ADMIN
-     */
     const adminEmailPromise = mailService.sendEmail({
       to: process.env.WAITLIST_RECEIVER_EMAIL as string,
       subject: "New Waitlist Signup",
@@ -78,21 +72,19 @@ export async function joinWaitlist(email: string): Promise<ActionResponse> {
       }),
     });
 
-    /**
-     * 6. Run both in parallel
-     */
     await Promise.all([customerEmailPromise, adminEmailPromise]);
 
     return {
-      success: true,
-      message: "Successfully joined waitlist",
+      status: "success",
+      message:
+        "Thanks for joining the waitlist! You’ll be among the first to know when our gentle baby wipes launch.",
     };
   } catch (error) {
     console.error(error);
 
     return {
-      success: false,
-      message: "Something went wrong",
+      status: "error",
+      message: "Something went wrong. Please try again.",
     };
   }
 }

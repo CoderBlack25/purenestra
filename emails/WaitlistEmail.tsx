@@ -15,12 +15,10 @@ import {
   Column,
 } from "@react-email/components";
 
-// const baseUrl =
-//   process.env.NODE_ENV === "production"
-//     ? "https://www.purenestra.com"
-//     : "http://localhost:3000";
-
-const baseUrl = "https://www.purenestra.com";
+// Email clients fetch these over the network, so they must be absolute URLs.
+// Falls back to production so previews and one-off sends still resolve.
+const baseUrl =
+  process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.purenestra.com";
 
 const WaitlistEmail = () => {
   return (
@@ -55,7 +53,7 @@ const WaitlistEmail = () => {
         <Container style={container}>
           <Section style={logoSection}>
             <Img
-              src={`${baseUrl}/email-logo.png`}
+              src={`${baseUrl}/email/logo.png`}
               width="180"
               alt="PureNestra"
               style={logo}
@@ -64,7 +62,7 @@ const WaitlistEmail = () => {
 
           <Section>
             <Img
-              src={`${baseUrl}/png/wipe4.png`}
+              src={`${baseUrl}/email/hero-wipes.jpg`}
               width="100%"
               alt="Baby wipes"
               style={heroImage}
@@ -76,26 +74,32 @@ const WaitlistEmail = () => {
               Welcome to the<span style={span}> Nest!!</span>
             </Heading>
 
-            <Text style={paragraph}>We're so glad you're here.🤍</Text>
-
             <Text style={paragraph}>
-              You've just joined something that started as a mum’s worry and a decision that something better had to exist for her baby's skin. That's  PureNestra. And you're now among the very first parents to be part of it.
+              We&apos;re so glad you&apos;re here.🤍
             </Text>
 
             <Text style={paragraph}>
-              This isn't just a waitlist. You're a founding member of the Nest, and that means something to us.
+              You&apos;ve just joined something that started as a mum’s worry
+              and a decision that something better had to exist for her
+              baby&apos;s skin. That&apos;s PureNestra. And you&apos;re now
+              among the very first parents to be part of it.
+            </Text>
+
+            <Text style={paragraph}>
+              This isn&apos;t just a waitlist. You&apos;re a founding member of
+              the Nest, and that means something to us.
             </Text>
           </Section>
 
           <Section style={benefitsSection}>
             <Heading style={benefitsHeading}>
-              Here's what <span style={span}>you’ve</span> unlocked:
+              Here&apos;s what <span style={span}>you’ve</span> unlocked:
             </Heading>
 
             <Row style={benefitItem}>
               <Column width="68" style={iconColumn}>
                 <Img
-                  src={`${baseUrl}/gift-icon.png`}
+                  src={`${baseUrl}/email/gift-icon.png`}
                   width="48"
                   height="48"
                   alt="Gift"
@@ -109,7 +113,8 @@ const WaitlistEmail = () => {
                 </Text>
 
                 <Text style={benefitDescription}>
-                  You'll be first through the door when PureNestra launches. Before the public. Before anyone else.
+                  You&apos;ll be first through the door when PureNestra
+                  launches. Before the public. Before anyone else.
                 </Text>
               </Column>
             </Row>
@@ -135,7 +140,7 @@ const WaitlistEmail = () => {
             <Row style={benefitItem}>
               <Column width="68" style={iconColumn}>
                 <Img
-                  src={`${baseUrl}/discount-icon.png`}
+                  src={`${baseUrl}/email/discount-icon.png`}
                   width="48"
                   height="48"
                   alt="Discount"
@@ -144,18 +149,19 @@ const WaitlistEmail = () => {
               </Column>
 
               <Column style={benefitTextWrapper}>
-                <Text style={benefitTitle}>
-                  10% off your first order
-                </Text>
+                <Text style={benefitTitle}>10% off your first order</Text>
 
-                <Text style={benefitDescription}>Our thank you for saying yes early. It'll be waiting for you at launch on your first order.</Text>
+                <Text style={benefitDescription}>
+                  Our thank you for saying yes early. It&apos;ll be waiting for
+                  you at launch on your first order.
+                </Text>
               </Column>
             </Row>
 
             <Row style={benefitItem}>
               <Column width="68" style={iconColumn}>
                 <Img
-                  src={`${baseUrl}/bell-icon.png`}
+                  src={`${baseUrl}/email/bell-icon.png`}
                   width="48"
                   height="48"
                   alt="Updates"
@@ -164,26 +170,24 @@ const WaitlistEmail = () => {
               </Column>
 
               <Column style={benefitTextWrapper}>
-                <Text style={benefitTitle}>
-                  First to know everything
-                </Text>
+                <Text style={benefitTitle}>First to know everything</Text>
 
-                <Text style={benefitDescription}>New releases, behind-the-scenes updates, surprises. You'll always hear it here first.</Text>
+                <Text style={benefitDescription}>
+                  New releases, behind-the-scenes updates, surprises.
+                  You&apos;ll always hear it here first.
+                </Text>
               </Column>
             </Row>
           </Section>
 
           <Text style={paragraph}>
-            And if you ever have a question, just reply to this email. We actually read them. 🤍
+            And if you ever have a question, just reply to this email. We
+            actually read them. 🤍
           </Text>
 
-          <Text style={paragraph}>
-            Nestly yours,
-          </Text>
+          <Text style={paragraph}>Nestly yours,</Text>
 
-          <Text style={paragraph2}>
-            From PureNestra Team
-          </Text>
+          <Text style={paragraph2}>From PureNestra Team</Text>
 
           <Hr style={divider} />
 
@@ -195,7 +199,7 @@ const WaitlistEmail = () => {
             <Column align="right">
               <Link href="https://www.instagram.com/purenestra">
                 <Img
-                  src={`${baseUrl}/instagram.png`}
+                  src={`${baseUrl}/email/instagram.png`}
                   width="32"
                   height="32"
                   alt="Instagram"
@@ -205,7 +209,7 @@ const WaitlistEmail = () => {
 
               <Link href="https://www.tiktok.com/@purenestra">
                 <Img
-                  src={`${baseUrl}/tiktok.png`}
+                  src={`${baseUrl}/email/tiktok.png`}
                   width="32"
                   height="32"
                   alt="Tiktok"
@@ -215,7 +219,7 @@ const WaitlistEmail = () => {
 
               <Link href="https://www.facebook.com/share/18eSqGsDMX/">
                 <Img
-                  src={`${baseUrl}/facebook.png`}
+                  src={`${baseUrl}/email/facebook.png`}
                   width="32"
                   height="32"
                   alt="Facebook"

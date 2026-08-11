@@ -42,8 +42,11 @@ const Testimonials = () => {
               </blockquote>
 
               <div className="mt-8 flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-muted text-sm font-semibold">
-                  BT
+                <div
+                  aria-hidden="true"
+                  className="flex h-12 w-12 items-center justify-center rounded-full bg-muted text-sm font-semibold"
+                >
+                  {testimonial.author.replace(/[^A-Za-z]/g, "")}
                 </div>
 
                 <div>

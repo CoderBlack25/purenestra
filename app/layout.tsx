@@ -1,26 +1,9 @@
 import type { Metadata } from "next";
-import {
-  Geist,
-  Geist_Mono,
-  Fraunces,
-  Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { cn } from "@/lib/utils";
-
-const jetbrainsMono = JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -32,9 +15,53 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.purenestra.com";
+
+const description =
+  "Gentle baby wipes made for soft, safe, everyday care. 2X wider, plant-based, pH-balanced and dermatologist tested.";
+
 export const metadata: Metadata = {
-  title: "PureNestra",
-  description: "Gentle baby wipes made for soft, safe, everyday care.",
+  metadataBase: new URL(siteUrl),
+  // `template` lets future pages set just their own title, e.g. "Pre-Order".
+  title: {
+    default: "PureNestra — Gentle baby wipes for delicate skin",
+    template: "%s | PureNestra",
+  },
+  description,
+  applicationName: "PureNestra",
+  keywords: [
+    "baby wipes",
+    "sensitive skin",
+    "plant-based wipes",
+    "pH-balanced",
+    "dermatologist tested",
+    "PureNestra",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "PureNestra",
+    title: "PureNestra — Gentle baby wipes for delicate skin",
+    description,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PureNestra — Gentle baby wipes for delicate skin",
+    description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
+  },
 };
 
 export default function RootLayout({
@@ -45,16 +72,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, fraunces.variable, plusJakartaSans.variable, "font-mono", jetbrainsMono.variable)}
+      className={cn(
+        "h-full",
+        "antialiased",
+        fraunces.variable,
+        plusJakartaSans.variable,
+      )}
     >
       <body className="min-h-full flex flex-col">
         {children}
-        <Toaster
-          position="bottom-center"
-          richColors
-          closeButton
-          duration={5000}
-        />
         <Analytics />
         <SpeedInsights />
       </body>
