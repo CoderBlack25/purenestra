@@ -7,9 +7,6 @@ import { MailService } from "@/lib/mail/mail.service";
 import WaitlistEmail from "@/emails/WaitlistEmail";
 import AdminNotificationEmail from "@/emails/AdminNotificationEmail";
 
-/**
- * Messages are display-ready so the client never branches on copy.
- */
 export type WaitlistFormState = {
   status: "success" | "error";
   message: string;

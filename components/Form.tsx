@@ -7,7 +7,6 @@ import { joinWaitlist } from "@/actions/waitlist.action";
 const Form = () => {
   const [state, formAction, isPending] = useActionState(joinWaitlist, null);
 
-  // This form renders twice on the page, so ids have to be instance-scoped.
   const emailId = useId();
   const errorId = `${emailId}-error`;
 
@@ -53,7 +52,11 @@ const Form = () => {
           />
 
           {hasError && (
-            <p id={errorId} role="alert" className="text-red-600 text-sm mt-2 pl-3">
+            <p
+              id={errorId}
+              role="alert"
+              className="text-red-600 text-sm mt-2 pl-3"
+            >
               {state.message}
             </p>
           )}

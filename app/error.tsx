@@ -32,7 +32,7 @@ export default function Error({
       </p>
 
       {error.digest && (
-        <p className="mt-3 font-plus-jakarta-sans text-xs text-(--color-brown-dark)/70">
+        <p className="mt-3 font-plus-jakarta-sans text-xs text-brown-dark/70">
           Reference: {error.digest}
         </p>
       )}

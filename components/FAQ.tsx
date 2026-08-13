@@ -70,8 +70,6 @@ export default function FAQ() {
           />
         </button>
 
-        {/* 0fr -> 1fr animates the row to its content height without measuring it in JS.
-            `inert` keeps the collapsed copy out of the tab order and the a11y tree. */}
         <div
           id={panelId}
           role="region"

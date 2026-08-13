@@ -4,7 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-
   /* Primary earthy tones */
   --color-brown-dark: #423027;
   --color-brown-main: #574238;
@@ -130,7 +129,6 @@
 
 html {
   scroll-behavior: smooth;
-  /* Keeps anchor targets clear of the fixed navbar. */
   scroll-padding-top: 5rem;
 }
 

@@ -15,14 +15,14 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.purenestra.com";
+const siteUrl =
+  process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.purenestra.com";
 
 const description =
   "Gentle baby wipes made for soft, safe, everyday care. 2X wider, plant-based, pH-balanced and dermatologist tested.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  // `template` lets future pages set just their own title, e.g. "Pre-Order".
   title: {
     default: "PureNestra — Gentle baby wipes for delicate skin",
     template: "%s | PureNestra",
